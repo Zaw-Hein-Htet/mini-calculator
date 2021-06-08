@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600&display=swap');
+
+:root{
+    --primary : #2D6CDF;
+    --primary-soft : #588ef3;
+    --secondary : #707070;
+    --secondary-soft : #f2f2f2;
+    --light : #ffffff;
+    --dark : #000000;
+    --br : 5px;
+}
+
+@font-face {
+    font-family: "mm";
+    font-weight: normal;
+    src: url(../fonts/PadaukSagar.ttf);
+}
+
+@font-face {
+    font-family: "mm";
+    font-weight: bold;
+    src: url(../fonts/Pyidaungsu-2.5_Bold.ttf);
+}
+
+.mm {
+    font-family: "mm";
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald','mm';
+    color: var(--secondary);
+}
+
+.divider{
+    background-color: var(--primary);
+    height: 5px;
+    border-radius: var(--br);
+}
+
+.app{
+    width: 700px;
+    margin: 100px auto;
+}
+
+.output{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-container{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.brand{
+    font-size: 30px;
+}
+
+.result-container{
+    display: flex;
+    align-items: center;
+}
+
+.result{
+    font-size: 50px;
+}
+
+.calc{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.container{
+    width: 150px;
+}
+
+.container label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input {
+    text-align: right;
+}
+
+.calc-btn{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--br);
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--light);
+    font-size: 20px; 
+    text-transform: uppercase;  
+}
+
+.calc-btn:active{
+    background-color: var(--primary-soft);
+}
+
+.from,.to,.input{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: var(--br);
+    border: 1px solid var(--secondary);
+}
+
+.select:focus,.button:focus,.input:focus{
+    outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+select::-ms-expand {	display: none; }
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+@-moz-document url-prefix(){
+   select { width: 110%; background-position: right 30px center !important; border: none !important;}
+}
+
+.history {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* border-collapse: collapse; */
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .history td, .history th {
+    padding: 8px;
+    border-radius: var(--br);
+  }
+  
+  /* .history tr:nth-child(even){background-color: var(--secondary-soft);} */
+
+  .history tr{
+      background-color: var(--secondary-soft);
+  }
+  
+  .history tr:hover {background-color: #ddd;}
+  
+  .history th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary);
+    color: var(--light);
+  }
+
+  .history th:last-child{
+      text-align: right;
+  }
+
+  .bbn{
+      margin-top: 10px;
+  }
+  
+  .history tr td:last-child{
+      text-align: right;
+  }
+
+   #rowSpacer td{
+       text-align: center !important;
+   }
+
+   .mode-change{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: var(--dark);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.mode-change .fas{
+    color: var(--light) !important;
+}
+
+
+   @media screen and (max-width:480px){
+       .app{
+           width: 96%;
+       }
+       .output{
+           flex-flow: column;
+           align-items: flex-end;
+       }
+       .brand-container{
+           width: 100%;
+       }
+       .calc{
+           flex-wrap: wrap;
+       }
+       .container{
+           width: 100%;
+           margin-bottom: 10px;
+       }
+       .from-container,.to-container{
+           width: 45%;
+           margin-bottom: 15px;
+       }
+       .calc-btn{
+           padding: 20px 0;
+       }
+       .from,.to,.input{
+        padding: 15px 5px;
+        border-radius: var(--br);
+        border: 1px solid var(--secondary);
+       }
+       .mode-change{
+           position: absolute;
+           top: 10px;
+           right: 5px;
+       }
+   }
+

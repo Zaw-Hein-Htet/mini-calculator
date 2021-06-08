@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Calculator</title>
+    
+    <link rel="icon" href="photo/logo.svg">
+
+    <!-- Primary Meta Tags -->
+<title>Power Exchange Calculator</title>
+<meta name="title" content="Power Exchange Calculator">
+<meta name="description" content="Testing project from MMSIT SWD7.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.facebook.com">
+<meta property="og:title" content="Power Exchange Calculator">
+<meta property="og:description" content="Testing project from MMSIT SWD7.">
+<meta property="og:image" content="photo/logo.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.twitter.com">
+<meta property="twitter:title" content="Power Exchange Calculator">
+<meta property="twitter:description" content="Testing project from MMSIT SWD7.">
+<meta property="twitter:image" content="photo/logo.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendor/animate_it/animate.min.css">
+    <link rel="stylesheet" href="css/night.css">
+</head>
+<body>
+
+    <div class="app">
+        <div class="output">
+            <div class="brand-container">
+                <img src="photo/logo.png" class="logo" alt="">
+                <p class="brand">MMEx</p>
+            </div>
+            <div class="result-container">
+               <p class="result" id="result">0.00</p>
+            </div>
+        </div>
+    <div class="divider"></div>
+
+    <form class="calc" id="calc">
+        <div class="input-container container">
+            <label for="">Input</label>
+            <input type="number" class="input" id="input" min="1" placeholder="0.00" autofocus>
+        </div>
+        <div class="from-container container">
+            <label for="">From</label>
+            <select  id="from" class="from" onchange="test()" required>
+                <option value="">Select Currency</option>
+            </select>
+        </div>
+        <div class="to-container container">
+            <label for="">To</label>
+            <select  id="to" class="to" required>
+
+            </select>
+        </div>
+        <div class="calculate-container container">
+            <button class="calc-btn" id="calcBtn">Calulate</button>
+        </div>
+    </form>
+    <div class="history-container">
+        <table class="history">
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>from</th>
+                    <th>To</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody id="historyList">
+                
+            </tbody>
+        </table>
+    </div>
+    <button  class="calc-btn bbn animate__animated animate__fadeInDown" onclick="deleteItem()">2-click2Delect</button>
+    </div>
+
+    <button class="mode-change animate__animated animate__slideInUp" onclick="changeMode()">
+        <i class="fas fa-moon" id="modeIcon"></i>
+    </button>
+    
+
+    
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script> 
+</body>
+</html>
